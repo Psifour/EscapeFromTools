@@ -79,7 +79,7 @@ public class EscapeFromTools {
 
         JFileChooser dbChooser = new JFileChooser();
         dbChooser.setDialogTitle(Constants.DIALOG_FILECHOOSER_DB);
-        dbChooser.setCurrentDirectory(new File("C:\\Users\\Psifour\\Downloads\\EmuTarkov\\server\\db")); // TODO: REMOVE THIS BEFORE SHIPPING
+        dbChooser.setCurrentDirectory(new File(".")); // TODO: REMOVE THIS BEFORE SHIPPING
         dbChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         if(dbChooser.showOpenDialog(mainWindow) == JFileChooser.APPROVE_OPTION) {
             DB_DIRECTORY = dbChooser.getSelectedFile();
