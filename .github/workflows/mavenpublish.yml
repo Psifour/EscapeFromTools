@@ -26,5 +26,10 @@ jobs:
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v1
+        with:
+        name: Package
+        path: staging
       env:
         GITHUB_TOKEN: ${{ github.token }}
